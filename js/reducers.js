@@ -1,26 +1,34 @@
 var actions = require('./actions');
 
-var initialGameState = {};
+//var initialGameState = {};
 
-var gameReducer = function(state, action) {
-	state = state || initialGameState;
+var gameReducer = function(state = {}, action) {
+	//state = state || initialGameState;
 
 	if(action.type === actions.NEW_GAME) {
-		return {
+		// return {
+		// 	guessList: [],
+		// 	randomNum: Math.floor(Math.random() * 100 + 1),
+		// 	feedback: "Make your Guess",
+		// }
+		state = {};
+		state = {
 			guessList: [],
 			randomNum: Math.floor(Math.random() * 100 + 1),
-			feedback: "Make your Guess",
+			feedback: "Make your Guess"
 		}
 	}
 
 	if(action.type === actions.GUESS_NUM) {
-		var userGuess = state.guessList[guessList.length - 1];
+		var userGuess = state.guessList[state.guessList.length - 1];
 		var distance = Math.abs(userGuess - state.randomNum);
 		var feedback = '';
 
+		// state = {};
+
 		if (userGuess <= 100 && userGuess >= 1) {
 			if (distance === 0) {
-				feedback ='You got it!'
+				stateCopy.feedback ='You got it!'
 			}
 			if (distance <= 5) {
 				feedback = 'Burning!'
@@ -41,8 +49,10 @@ var gameReducer = function(state, action) {
 		// Update feedback 
 		// Update counter
 		// Update guess array
-		
-
 
 	}
+
+	return state;
 };
+
+exports.gameReducer = gameReducer;
