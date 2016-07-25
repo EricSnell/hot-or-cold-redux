@@ -1,19 +1,45 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var theGuess = React.createClass({
-	render: function() {
-		return (
-			var 
 
 
-			)
-	}
+$(document).ready(function(){
+    var randomNumber;
+    var guessCounter = 0;
+    newGame();
 
-})
+	/*--- Display information modal box ---*/
+  	$(".what").click(function(){
+    	$(".overlay").fadeIn(1000);
 
-//old jquery---->
-var theGuess = function() {
+  	});
+
+    /*--- Launch New Game ---*/
+    $(".new").click(function(){
+        newGame();
+    });
+
+  	/*--- Hide information modal box ---*/
+  	$("a.close").click(function(){
+  		$(".overlay").fadeOut(1000);
+  	});
+
+    $("#guessButton").on('click', function(event) {
+        event.preventDefault();
+        theGuess();
+    })
+
+    /*--- New Game ---*/
+    function newGame() {
+        randomNumber = Math.floor((Math.random() * 100) + 1);
+        $("#count").text("0"); 
+        $("#guessList").text("");
+        $("#userGuess").val(null);
+        $("#feedback").text("Make Your Guess!");
+    }
+
+    /*--- The Game ---*/
+    var theGuess = function() {
         var userNumber = $("#userGuess").val();	
         var distance = Math.abs(userNumber - randomNumber);
         
@@ -48,4 +74,3 @@ var theGuess = function() {
 	    }
     }
 });
-

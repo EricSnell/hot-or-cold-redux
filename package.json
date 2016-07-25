@@ -11,14 +11,13 @@
     "watch": "npm run watch:html & npm run watch:css & npm run watch:js",
     "clean": "rm -rf build",
     "build:html": "npm run clean:html && cp index.html build/",
-    "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
+    "watch:html": "npm run build:html && chokidar style.css -c 'npm run build:css'",
     "clean:html": "rm -f build/index.html",
     "build:css": "npm run clean:css && cp style.css build/",
-    "watch:html": "npm run build:html && chokidar style.css -c 'npm run build:css'",
     "clean:css": "rm -f build/style.css",
     "build:js": "npm run clean:js && webpack",
     "watch:js": "npm run build:js && webpack --watch",
-    "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map"   
+    "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map"
   },
   "babel": {
     "presets": [
@@ -30,7 +29,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
