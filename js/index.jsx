@@ -1,3 +1,8 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+
+
 $(document).ready(function(){
     var randomNumber;
     var guessCounter = 0;
