@@ -1,8 +1,8 @@
 var GUESS_NUM = 'GUESS_NUM';
-var guess = function(number) {
+var guess = function(userGuess) {
     return {
         type: GUESS_NUM,
-        number: number
+        number: userGuess
     }
 };
 
