@@ -18,6 +18,34 @@ var Game = React.createClass({
 		//TODO
 	},
 	render: function() {
+		return (
+			<section class="game"> 
+			
+				<h2 id="feedback">{this.props.feedback}</h2>
 
+				<form>
+					<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
+      			<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
+				</form>
+			
+      		<p>Guess #<span id="count">0</span>!</p>
+			
+				<ul id="guessList" class="guessBox clearfix">
+
+				</ul>
+
+			</section>
+			)
 	}
 });
+
+var mapStateToProps = function(state, props) {
+	return {
+		feedback: state.feedback,
+		guessList: state.guessList
+	}
+};
+
+var Container = connect(mapStateToProps)(Game);
+
+module.exports = Container;
