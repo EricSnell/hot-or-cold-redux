@@ -47,6 +47,7 @@ var gameReducer = function(state, action) {
 			return newState;
 		}
 	}
+	return state;
 };
 
 exports.gameReducer = gameReducer;

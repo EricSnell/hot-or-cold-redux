@@ -1,16 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var theGuess = React.createClass({
-	render: function() {
-		return (
-			var 
 
-
-			)
-	}
-
-})
 
 //old jquery---->
 var theGuess = function() {

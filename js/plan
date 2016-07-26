@@ -1,0 +1,12 @@
+##components
+1.) the game container
+	-taking the guess
+	-checking the guess to random number
+	-giving feedback
+	-offer new game on right answer
+2.) overlay
+
+##methods
+1.) new game
+2.) toggle overlay
+3.) submitting guess
