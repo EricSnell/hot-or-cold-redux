@@ -16,7 +16,9 @@ var gameReducer = function(state, action) {
 
 	if(action.type === actions.GUESS_NUM) {
 		// var userGuess = state.guessList[state.guessList.length - 1];
+		// new copy of the guessList array adding the user's guess
 		var newGuessList = state.guessList.concat(action.number);
+		// the difference between the correct answer and the user's guess
 		var distance = Math.abs(action.number - state.randomNum);
 		var feedback = '';
 
@@ -39,7 +41,7 @@ var gameReducer = function(state, action) {
 			else if (distance <= 99) {
 				feedback = 'Freezing!';
 			}
-
+			// Create new object that updates state, setting the guessList to the updated array, the feedback to the updated feedback, and the counter to the length of the new array
 			var newState = Object.assign({}, state, {guessList: newGuessList, feedback: feedback, counter: newGuessList.length});
 
 			return newState;
