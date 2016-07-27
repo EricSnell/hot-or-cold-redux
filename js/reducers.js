@@ -3,7 +3,7 @@ var actions = require('./actions');
 var initialGameState = {
 			guessList: [],
 			randomNum: Math.floor(Math.random() * 100 + 1),
-			feedback: "Make your Guess",
+			feedback: "Make your Guess"
 };
 
 var gameReducer = function(state, action) {
@@ -11,11 +11,7 @@ var gameReducer = function(state, action) {
 
 	if(action.type === actions.NEW_GAME) {
 		// The guess counter can be assigned to the length of the guessList array
-		return {
-			guessList: [],
-			randomNum: Math.floor(Math.random() * 100 + 1),
-			feedback: "Make your Guess",
-		}
+		return initialGameState;
 	}
 
 	if(action.type === actions.GUESS_NUM) {
@@ -46,7 +42,7 @@ var gameReducer = function(state, action) {
 				feedback = 'Freezing!';
 			}
 			// Create new object that updates state, setting the guessList to the updated array, the feedback to the updated feedback, and the counter to the length of the new array
-			var newState = Object.assign({}, state, {guessList: newGuessList, feedback: feedback, counter: newGuessList.length});
+			var newState = Object.assign({}, state, {guessList: newGuessList, feedback: feedback});
 
 			return newState;
 		}

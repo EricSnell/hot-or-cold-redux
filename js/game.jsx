@@ -5,7 +5,8 @@ var connect = require('react-redux').connect;
 
 
 var Game = React.createClass({
-	userGuess: function() {
+	userGuess: function(event) {
+		event.preventDefault();
 		//dispatch GUESS_NUM action
 		var userNumber = this.refs.userInput.value;
 		this.props.dispatch(actions.guess(userNumber));
@@ -35,7 +36,7 @@ var Game = React.createClass({
 		      		<button id="guessButton" className="button" value="Guess" onClick={this.userGuess}>Guess</button>
 					</form>
 		      	<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
-					<div id="guessList" className="guessBox clearfix">{this.props.guessList[this.props.guessList.length - 1]}</div>
+					<div id="guessList" className="guessBox clearfix">{this.props.guessList.join(", ")}</div>
 				</div>
 			</div>
 		)
