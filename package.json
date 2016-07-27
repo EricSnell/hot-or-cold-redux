@@ -11,11 +11,11 @@
     "watch": "npm run watch:html & npm run watch:css & npm run watch:js",
     "clean": "rm -rf build",
     "build:html": "npm run clean:html && cp index.html build/",
-    "watch:html": "npm run build:html && chokidar style.css -c 'npm run build:css'",
+    "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
     "clean:html": "rm -f build/index.html",
     "build:css": "npm run clean:css && cp style.css build/",
     "clean:css": "rm -f build/style.css",
-    "watch:css": "npm run build:css && ",
+    "watch:css": "npm run build:css && chokidar style.css -c 'npm run build:css'",
     "build:js": "npm run clean:js && webpack",
     "watch:js": "npm run build:js && webpack --watch",
     "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map"
