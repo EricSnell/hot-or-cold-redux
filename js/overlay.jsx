@@ -6,7 +6,6 @@ var connect = require('react-redux').connect;
 
 var Overlay = React.createClass({
 	render: function() {
-		console.log(this.props, '<== Overlay props');
 		var classes = 'overlay ';
 
 		if (!this.props.showOverlay) {
