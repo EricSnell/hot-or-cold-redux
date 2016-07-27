@@ -19,26 +19,18 @@ var Game = React.createClass({
 		this.props.dispatch(actions.newGame());
 	},
 	toggleOverlay: function() {
+		console.log(this.props, '<== Games props');
 		//dispatch displayOverlay action
 		this.props.dispatch(actions.displayOverlay());
 	},
-									// /*--- Display information modal box ---*/
-							  // 	$(".what").click(function(){
-							  //   	$(".overlay").fadeIn(1000);
-
-							  // 	});
-
-							  // 	/*--- Hide information modal box ---*/
-							  // 	$("a.close").click(function(){
-							  // 		$(".overlay").fadeOut(1000);
-							  // 	});
-
 
 	render: function() {
-		console.log(this.props);
+		console.log(this.props, '<== Games props render');
 		// to display last item in guessList array --> state.guessList[state.guessList.length - 1];
 		return (
+
 			<div className="game-container">
+			<Overlay closeOverlay={this.toggleOverlay}/>
 				<nav>
 					<ul className="clearfix">
 						<li><a className="what" onClick={this.toggleOverlay} href="#">What ?</a></li>
@@ -66,7 +58,8 @@ var Game = React.createClass({
 var mapStateToProps = function(state, props) {
 	return {
 		feedback: state.feedback,
-		guessList: state.guessList
+		guessList: state.guessList,
+		showOverlay: state.showOverlay
 	}
 };
 

@@ -17,12 +17,14 @@ var gameReducer = function(state, action) {
 		return newGameState;
 	}
 
-	// if(action.type === actions.DISPLAY_OVERLAY) {
-	// 	// toggle visibility of overlay (class .overlay) 
-	// 	// Remove a class: element.classList.toggle("classToRemove", false); 
-	// 	// Add a class: element.classList.toggle("classToAdd", true);
-
-	// }
+	if(action.type === actions.DISPLAY_OVERLAY) {
+		console.log(state);
+		if (!state.showOverlay) {
+			return Object.assign({}, state, {showOverlay: true})
+		} else {
+			return Object.assign({}, state, {showOverlay: false})
+		}
+	}
 
 	if(action.type === actions.GUESS_NUM) {
 		// var userGuess = state.guessList[state.guessList.length - 1];
