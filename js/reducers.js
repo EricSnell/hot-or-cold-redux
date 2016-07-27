@@ -1,9 +1,10 @@
 var actions = require('./actions');
 
 var initialGameState = {
-			guessList: [],
-			randomNum: Math.floor(Math.random() * 100 + 1),
-			feedback: "Make your Guess"
+	guessList: [],
+	randomNum: Math.floor(Math.random() * 100 + 1),
+	feedback: "Make your Guess",
+	showOverlay: false
 };
 
 var gameReducer = function(state, action) {
@@ -11,8 +12,17 @@ var gameReducer = function(state, action) {
 
 	if(action.type === actions.NEW_GAME) {
 		// The guess counter can be assigned to the length of the guessList array
-		return initialGameState;
+		var newGameState = Object.assign(initialGameState, {randomNum: Math.floor(Math.random() * 100 + 1)});
+
+		return newGameState;
 	}
+
+	// if(action.type === actions.DISPLAY_OVERLAY) {
+	// 	// toggle visibility of overlay (class .overlay) 
+	// 	// Remove a class: element.classList.toggle("classToRemove", false); 
+	// 	// Add a class: element.classList.toggle("classToAdd", true);
+
+	// }
 
 	if(action.type === actions.GUESS_NUM) {
 		// var userGuess = state.guessList[state.guessList.length - 1];

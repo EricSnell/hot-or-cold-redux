@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var actions = require('./actions');
 var connect = require('react-redux').connect;
+var Overlay = require('./overlay');
 
 
 var Game = React.createClass({
@@ -13,12 +14,26 @@ var Game = React.createClass({
 	},
 	resetGame: function() {
 		//dispatch NEW_GAME action
+		//onChange!
+		this.refs.userInput.value = '';
 		this.props.dispatch(actions.newGame());
 	},
 	toggleOverlay: function() {
 		//dispatch displayOverlay action
-		//TODO
+		this.props.dispatch(actions.displayOverlay());
 	},
+									// /*--- Display information modal box ---*/
+							  // 	$(".what").click(function(){
+							  //   	$(".overlay").fadeIn(1000);
+
+							  // 	});
+
+							  // 	/*--- Hide information modal box ---*/
+							  // 	$("a.close").click(function(){
+							  // 		$(".overlay").fadeOut(1000);
+							  // 	});
+
+
 	render: function() {
 		console.log(this.props);
 		// to display last item in guessList array --> state.guessList[state.guessList.length - 1];
