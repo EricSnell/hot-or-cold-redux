@@ -25,7 +25,7 @@ var Game = React.createClass({
 		return (
 			<div className="game-container">
 				<nav>
-					<ul class="clearfix">
+					<ul className="clearfix">
 						<li><a className="what" onClick={this.toggleOverlay} href="#">What ?</a></li>
 						<li><a className="new" onClick={this.resetGame} href="#">+ New Game</a></li>
 					</ul>
