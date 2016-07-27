@@ -59,23 +59,22 @@ nav {
 	padding: 1em;
 }
 
-nav {
+nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1.2em;
 }
 
-nav:first-child {
+nav ul li:first-child {
 	float: left;
 }
 
-nav:last-child {
+nav ul li:last-child {
 	float: right;
 }
 
-nav {
-
-	color: #fff;
+nav a{
+		color: #fff;
 }
 
 h1 {

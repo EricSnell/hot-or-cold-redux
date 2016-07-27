@@ -23,12 +23,16 @@ var Game = React.createClass({
 		console.log(this.props);
 		// to display last item in guessList array --> state.guessList[state.guessList.length - 1];
 		return (
-			<div>
+			<div className="game-container">
 				<nav>
-					<div className="what" onClick={this.toggleOverlay}>What ?</div>
-					<div className="new" onClick={this.resetGame}>+ New Game</div>
+					<ul class="clearfix">
+						<li><a className="what" onClick={this.toggleOverlay} href="#">What ?</a></li>
+						<li><a className="new" onClick={this.resetGame} href="#">+ New Game</a></li>
+					</ul>
 				</nav>
-
+				<header>
+					<h1>HOT or COLD</h1>
+				</header>
 				<div className="game"> 
 					<h2 id="feedback">{this.props.feedback}</h2>
 					<form>
