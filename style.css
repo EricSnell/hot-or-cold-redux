@@ -59,21 +59,21 @@ nav {
 	padding: 1em;
 }
 
-nav ul li {
+nav {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1.2em;
 }
 
-nav ul li:first-child {
+nav:first-child {
 	float: left;
 }
 
-nav ul li:last-child {
+nav:last-child {
 	float: right;
 }
 
-nav a {
+nav {
 
 	color: #fff;
 }
@@ -247,7 +247,7 @@ input {
 	border-radius: 4px;
 }
 
-input.button {
+button {
 	background: #1F253D;
 	color: #95a5a6;
 	font-size: 2em;
@@ -257,9 +257,12 @@ input.button {
 	-ms-transition: background 1s ease-in-out;
 	-o-transition: background 1s ease-in-out;
 	transition: background 1s ease-in-out;
+	width: 8em;
+	height: 1.8em;
+	margin-top: 1em;
 }
 
-input.button:hover {
+button:hover {
 	background: #e64c65;
 	color: #fff;
 	-webkit-transition: background 1s ease-in-out;

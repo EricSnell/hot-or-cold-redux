@@ -1,6 +1,10 @@
 var actions = require('./actions');
 
-var initialGameState = {};
+var initialGameState = {
+			guessList: [],
+			randomNum: Math.floor(Math.random() * 100 + 1),
+			feedback: "Make your Guess",
+};
 
 var gameReducer = function(state, action) {
 	state = state || initialGameState;

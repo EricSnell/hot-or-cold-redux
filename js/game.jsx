@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var actions = require('./actions');
 var connect = require('react-redux').connect;
 
+
 var Game = React.createClass({
 	userGuess: function() {
 		//dispatch GUESS_NUM action
@@ -18,25 +19,29 @@ var Game = React.createClass({
 		//TODO
 	},
 	render: function() {
+		console.log(this.props);
 		// to display last item in guessList array --> state.guessList[state.guessList.length - 1];
 		return (
-			<nav>
-				<div className="what" onClick={this.toggleOverlay}>What ?</div>
-				<div className="new" onClick={this.resetGame}>+ New Game</div>
-			</nav>
+			<div>
+				<nav>
+					<div className="what" onClick={this.toggleOverlay}>What ?</div>
+					<div className="new" onClick={this.resetGame}>+ New Game</div>
+				</nav>
 
-			<section className="game"> 
-				<h2 id="feedback">{this.props.feedback}</h2>
-				<form>
-					<input type="text" name="userGuess" id="userGuess" className="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
-      			<button id="guessButton" className="button" value="Guess" onClick={this.userGuess} />
-				</form>
-      		<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
-				<div id="guessList" className="guessBox clearfix">{this.props.guessList[props.guessList.length - 1]}</div>
-			</section>
+				<div className="game"> 
+					<h2 id="feedback">{this.props.feedback}</h2>
+					<form>
+						<input type="text" ref="userInput" name="userGuess" id="userGuess" className="text" maxLength="3" autoComplete="off" placeholder="Enter your Guess" required/>
+		      		<button id="guessButton" className="button" value="Guess" onClick={this.userGuess}>Guess</button>
+					</form>
+		      	<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
+					<div id="guessList" className="guessBox clearfix">{this.props.guessList[this.props.guessList.length - 1]}</div>
+				</div>
+			</div>
 		)
 	}
 });
+
 
 var mapStateToProps = function(state, props) {
 	return {
