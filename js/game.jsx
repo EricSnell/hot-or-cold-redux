@@ -18,24 +18,23 @@ var Game = React.createClass({
 		//TODO
 	},
 	render: function() {
+		// to display last item in guessList array --> state.guessList[state.guessList.length - 1];
 		return (
-			<section class="game"> 
-			
+			<nav>
+				<div className="what" onClick={this.toggleOverlay}>What ?</div>
+				<div className="new" onClick={this.resetGame}>+ New Game</div>
+			</nav>
+
+			<section className="game"> 
 				<h2 id="feedback">{this.props.feedback}</h2>
-
 				<form>
-					<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
-      			<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
+					<input type="text" name="userGuess" id="userGuess" className="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
+      			<button id="guessButton" className="button" value="Guess" onClick={this.userGuess} />
 				</form>
-			
-      		<p>Guess #<span id="count">0</span>!</p>
-			
-				<ul id="guessList" class="guessBox clearfix">
-
-				</ul>
-
+      		<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
+				<div id="guessList" className="guessBox clearfix">{this.props.guessList[props.guessList.length - 1]}</div>
 			</section>
-			)
+		)
 	}
 });
 

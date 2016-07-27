@@ -15,6 +15,7 @@
     "clean:html": "rm -f build/index.html",
     "build:css": "npm run clean:css && cp style.css build/",
     "clean:css": "rm -f build/style.css",
+    "watch:css": "npm run build:css && ",
     "build:js": "npm run clean:js && webpack",
     "watch:js": "npm run build:js && webpack --watch",
     "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map"
@@ -30,6 +31,7 @@
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-redux": "^4.4.5",
     "redux": "^3.5.2"
   },
   "devDependencies": {
