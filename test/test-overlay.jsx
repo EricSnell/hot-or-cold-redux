@@ -1,12 +1,10 @@
 /*---------- DEPENDENCIES ----------*/
 var React = require('react');
 var TestUtils = require('react-addons-test-utils');
-var Provider = require('react-redux').Provider;
 var should = require('chai').should();
 var Overlay = require('../js/overlay.jsx');
 var store = require('../js/store.js');
-
-
+var Provider = require('react-redux').Provider;
 
 /*---------- TEST RENDER ----------*/
 var renderer = TestUtils.createRenderer();
