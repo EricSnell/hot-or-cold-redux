@@ -11,7 +11,6 @@ var Overlay = React.createClass({
 		if (!this.props.showOverlay) {
 			classes += 'hidden';
 		}
-
 		return (
 			<div className={classes} id="modal">
 				<div className="content">
@@ -28,7 +27,6 @@ var Overlay = React.createClass({
 					</div>
 				</div>
 			</div>
-
 		)
 	}
 });
@@ -40,8 +38,8 @@ var mapStateToProps = function(state, props) {
 	}
 };
 
-
 var Container = connect(mapStateToProps)(Overlay);
 
-module.exports = Container;  	
+module.exports = Container;  
+// Comment out for running on server, leave for testing
 module.exports = Overlay;		

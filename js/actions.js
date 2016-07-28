@@ -25,4 +25,4 @@ exports.NEW_GAME = NEW_GAME;
 exports.DISPLAY_OVERLAY = DISPLAY_OVERLAY;
 exports.guess = guess;
 exports.newGame = newGame;
-exports.displayOverlay = displayOverlay;
+exports.displayOverlay = displayOverlay
