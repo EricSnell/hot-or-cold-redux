@@ -27,10 +27,24 @@ var Game = React.createClass({
 		var guesses = this.props.guessList.map(function(guess, index) {
    		return <li key={index}>{guess}</li>
     });
-    
+		var container = 'game ';
+		if (this.props.feedback === 'Freezing!') {
+			container += 'freezing';
+		} else if (this.props.feedback === 'Cold') {
+			container += 'cold';
+		} else if (this.props.feedback === 'Warm') {
+			container += 'warm';
+		} else if (this.props.feedback === 'Hot') {
+			container += 'hot';
+		} else if (this.props.feedback === 'So Hot Right Now') {
+			container += 'burning';
+		} else if (this.props.feedback === "You Got It!") {
+			container += 'correct';
+		}
+
 		return (
 
-			<div className="game-container">
+			<div className='game-container'>
 			<Overlay closeOverlay={this.toggleOverlay}/>
 				<nav>
 					<ul className="clearfix">
@@ -41,7 +55,7 @@ var Game = React.createClass({
 				<header>
 					<h1>HOT or COLD</h1>
 				</header>
-				<div className="game"> 
+				<div className={container}>
 					<h2 id="feedback">{this.props.feedback}</h2>
 					<form>
 						<input type="text" ref="userInput" name="userGuess" id="userGuess" className="text" maxLength="3" autoComplete="off" placeholder="Enter your Guess" required/>
@@ -50,10 +64,10 @@ var Game = React.createClass({
 			     	<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
          <ul id="guessList" className="guessBox clearfix">
          	{guesses}
-         </ul>      
+         </ul>
 				</div>
 			</div>
-			
+
 		)
 	}
 });

@@ -42,7 +42,7 @@ var Container = connect(mapStateToProps)(Overlay);
 
 module.exports = Container;  
 // Comment out for running on server, leave for testing
-module.exports = Overlay;		
+// module.exports = Overlay;		
 
 // exports.Overlay = Overlay;
 // exports.Container = Container;

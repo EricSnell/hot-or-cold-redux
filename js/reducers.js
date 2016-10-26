@@ -36,10 +36,10 @@ var gameReducer = function(state, action) {
 
 		if (action.number <= 100 && action.number >= 1) {
 			if (distance === 0) {
-				feedback ='You got it!';
+				feedback ='You Got It!';
 			}
 			else if (distance <= 5) {
-				feedback = 'Burning!';
+				feedback = 'So Hot Right Now';
 			}
 			else if (distance <= 15) {
 				feedback = 'Hot';

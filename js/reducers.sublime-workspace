@@ -1,0 +1,347 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"balan",
+				"balancedTree"
+			],
+			[
+				"Bin",
+				"BinarySearchTree"
+			],
+			[
+				"Re",
+				"RepositoryList"
+			],
+			[
+				"ingredients",
+				"ingredientsPicked"
+			],
+			[
+				"in",
+				"ingredientList"
+			],
+			[
+				"c",
+				"contact"
+			],
+			[
+				"DIS",
+				"displayContactInfo"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 139.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/after-container.jsx",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/index.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/components/score.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/components/answer.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/actions.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/build/index.html",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/reducers.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/actions.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/store.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/reducers.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/src/js/components/Landing/Landing.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/index.html",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/frontend/config/paths.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/tile.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/timer.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/server.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/server.js",
+		"/Users/Eric/Thinkful/Projects/3/mocha-shopping/server.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/overlay-container.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/score-feedback.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/game-container.jsx",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/models/weight.js",
+		"/Users/Eric/Thinkful/Projects/3/shopping-list/server.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/models/word.js",
+		"/Users/Eric/Thinkful/Projects/3/shopping-list/public/index.html",
+		"/Users/Eric/Thinkful/Projects/3/quiz-app-mvc/index.html",
+		"/Users/Eric/Thinkful/Projects/3/quiz-app-mvc/index.js",
+		"/Users/Eric/Thinkful/Projects/3/MVC practice/index.html",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/models/user.js",
+		"/Users/Eric/Thinkful/Projects/stuff.js",
+		"/Users/Eric/Thinkful/Projects/5/spotify-recommend/server.js",
+		"/Users/Eric/Thinkful/Projects/10/frenchx_spaced_repetition/package.json",
+		"/Users/Eric/Thinkful/Projects/4/sup-template/package.json",
+		"/Users/Eric/Thinkful/Projects/9/arrays-ram/array.js",
+		"/Users/Eric/Thinkful/Projects/9/arrays-ram/memory.js",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/js/index.jsx",
+		"/Users/Eric/Thinkful/Projects/Other/test-timer/index.html",
+		"/Users/Eric/Thinkful/Projects/1/hot-or-cold-starter/js/app.js",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/index.html",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/css/style.css",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/js/nav-menu.jsx",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/build/index.html",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/index.jsx",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/webpack.config.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/package.json",
+		"/Users/Eric/Thinkful/Projects/Other/React-Navigation/package.json",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/js/Timer.jsx",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/index.html",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/css/style.css",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/build/index.html",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/webpack.config.js",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/js/index.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/webpack.config.js",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/package.json",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/index.html",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/Timer.jsx",
+		"/Users/Eric/Thinkful/Projects/Other/React-Timer/Timer.js",
+		"/Users/Eric/Thinkful/Projects/10/ds-recap/additional-dsa-questions.js",
+		"/Users/Eric/Thinkful/Projects/10/sorting/exercise.js",
+		"/Users/Eric/Thinkful/Projects/9/recursion-exercises.js",
+		"/Users/Eric/Thinkful/Projects/10/sorting/mergeSort.js",
+		"/Users/Eric/Thinkful/Projects/10/Searching/interview-questions.js",
+		"/Users/Eric/Thinkful/Projects/10/Searching/exercise.js",
+		"/Users/Eric/Thinkful/Projects/10/Binary-Search-Trees/interview-questions.js",
+		"/Users/Eric/Thinkful/Projects/10/Binary-Search-Trees/exercise.js",
+		"/Users/Eric/Thinkful/Projects/9/Hash-Maps/interview-questions.js",
+		"/Users/Eric/Thinkful/Projects/9/Hash-Maps/hash-exercise.js",
+		"/Users/Eric/Thinkful/Projects/9/Linked-Lists/exercise.js",
+		"/Users/Eric/Thinkful/Projects/9/Linked-Lists/interview-questions.js",
+		"/Users/Eric/Thinkful/Projects/9/binary-and-bitwise-operators/shift-operators",
+		"/Users/Eric/Thinkful/Projects/9/binary-and-bitwise-operators/shift-operators.js",
+		"/Users/Eric/Thinkful/Projects/9/binary-and-bitwise-operators/and-operator.js",
+		"/Users/Eric/Thinkful/Projects/9/binary-and-bitwise-operators/interview-questions-v2.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/odd-or-even.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/example.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/calc-nth-tri.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/find-element-series.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/find-nth-element.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/double-values.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/calculate-matrix.js",
+		"/Users/Eric/Thinkful/Projects/9/big-o-project/practice-problems.js",
+		"/Users/Eric/Thinkful/Projects/9/test-timer/index.html",
+		"/Users/Eric/Thinkful/Projects/react-assignment.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/README.md",
+		"/Users/Eric/Thinkful/Projects/6/trello-react-testing/js/board.jsx",
+		"/Users/Eric/Thinkful/Projects/6/trello-react-testing/js/card.jsx",
+		"/Users/Eric/Thinkful/Projects/6/trello-react-testing/js/boardcontainer.jsx",
+		"/Users/Eric/Thinkful/Projects/6/react-components/index.jsx",
+		"/Users/Eric/Thinkful/Projects/6/trello-react-testing/js/index.jsx",
+		"/Users/Eric/Thinkful/Projects/6/refactored-quiz/index.js",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/board.jsx",
+		"/Users/Eric/Thinkful/Projects/4/sup-template/models/user.js",
+		"/Users/Eric/Thinkful/Projects/4/sup-template/models/message.js",
+		"/Users/Eric/Thinkful/Projects/4/sup-template/index.js",
+		"/Users/Eric/Thinkful/Projects/3/shopping-list/package.json",
+		"/Users/Eric/Thinkful/Projects/3/musicians/musicians_files/package.json",
+		"/Users/Eric/Thinkful/Projects/3/musicians/musicians_files/spinal_tap.js",
+		"/Users/Eric/Thinkful/Projects/3/musicians/musicians_files/musicians.js",
+		"/Users/Eric/Thinkful/Projects/3/musicians/sleater/index.js",
+		"/Users/Eric/Thinkful/Projects/3/hello_client/hello_client.js",
+		"/Users/Eric/Thinkful/Projects/3/hello_client/package.json",
+		"/Users/Eric/Thinkful/Projects/3/hello_server/hello_server.js",
+		"/Users/Eric/Thinkful/Projects/3/hello_server/package.json",
+		"/Users/Eric/Thinkful/Projects/3/musicians/sleater/package.json",
+		"/Users/Eric/Thinkful/Projects/3/mocha-shopping/test.js",
+		"/Users/Eric/Thinkful/Projects/3/mocha-shopping/package.json",
+		"/Users/Eric/Thinkful/Projects/3/mocha-shopping/public/index.html",
+		"/Users/Eric/Thinkful/Projects/2/WorkingWithAjax/index.html",
+		"/Users/Eric/Thinkful/Projects/2/WorkingWithAjax/apps/app.js",
+		"/Users/Eric/Thinkful/Projects/2/Thinkful_Tube/index.html",
+		"/Users/Eric/Thinkful/Projects/2/Thinkful_Tube/js/tube.js",
+		"/Users/Eric/Thinkful/Projects/2/API_Hack/index.html",
+		"/Users/Eric/Thinkful/Projects/2/API_Hack/js/script.js",
+		"/Users/Eric/Web Projects/slide-in/style/style.css",
+		"/Users/Eric/Web Projects/index.html",
+		"/Users/Eric/Web Projects/js/script.js",
+		"/Users/Eric/Thinkful/Projects/2/stackerAJAX/js/app.js",
+		"/Users/Eric/Thinkful/Projects/2/stackerAJAX/index.html",
+		"/Users/Eric/Thinkful/Projects/2/Thinkful_Tube/css/styles.css",
+		"/Users/Eric/Thinkful/Projects/2/ContactsApp/js/script.js",
+		"/Users/Eric/Thinkful/Projects/2/ContactsApp/index.html",
+		"/Users/Eric/Thinkful/Projects/2/bartender/js/script.js",
+		"/Users/Eric/Thinkful/Projects/2/bartender/index.html",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/build/index.html",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/overlay-instructions.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/play-button.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/username-prompt.jsx",
+		"/Users/Eric/Thinkful/Projects/8/fullstack-game/js/before-container.jsx"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			");\n",
+			"fetchAddScore",
+			"%;",
+			"props",
+			"gameCharacter",
+			"function playTick() {\n	$(\"#check\")[0].volume = 0.5;\n	$(\"#check\")[0].load();\n	$(\"#check\")[0].play();\n}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "reducers.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
