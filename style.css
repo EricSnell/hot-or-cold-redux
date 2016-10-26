@@ -177,11 +177,11 @@ h1 {
 }
 
 .warm {
-  background-color: #FFB74D;
+  background-color: #F57F17;
 }
 
 .hot {
-  background-color: #FF6F00;
+  background-color: #FF5722;
 }
 
 .burning {
@@ -205,7 +205,7 @@ h1 {
 	-ms-transition: background 1s ease-in-out;
 	-o-transition: background 1s ease-in-out;
 	transition: background 1s ease-in-out;
-  border: 5px solid #FAFAFA;
+  border: 3px solid #009688;
 }
 
 h2 {
@@ -224,6 +224,7 @@ h2 {
 	margin-top: 0.5em;
 	font-size: 1.8em;
 	padding-bottom: 0.5em;
+  color: #fff;
 }
 
 #count {
@@ -247,8 +248,9 @@ input {
 }
 
 button {
-	background: #1F253D;
-	color: #95a5a6;
+	background: #4DB6AC;
+  border: 1px solid #fff;
+	color: #E0F2F1;
 	font-size: 2em;
 	padding: 0.2em;
 	-webkit-transition: background 1s ease-in-out;
@@ -262,7 +264,7 @@ button {
 }
 
 button:hover {
-	background: #e64c65;
+	background: #009688;
 	color: #fff;
 	-webkit-transition: background 1s ease-in-out;
 	-moz-transition: background 1s ease-in-out;
@@ -311,12 +313,12 @@ ul.guessBox {
 }
 ul.guessBox li {
 	display: inline;
-	background-color: #FAFAFA;
+	background-color: #EC407A;
 	padding: 0.3em;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 80%;
+	border-radius: 70%;
 	width: 95%;
 	margin: 0.2em;
-	color: #333;
+	color: #fff;
 }

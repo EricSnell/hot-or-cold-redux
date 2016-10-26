@@ -58,8 +58,24 @@ var Game = React.createClass({
 				<div className={container}>
 					<h2 id="feedback">{this.props.feedback}</h2>
 					<form>
-						<input type="text" ref="userInput" name="userGuess" id="userGuess" className="text" maxLength="3" autoComplete="off" placeholder="Enter your Guess" required/>
-			     		<button id="guessButton" className="button" value="Guess" onClick={this.userGuess}>Guess</button>
+						<input
+							type="text"
+							ref="userInput"
+							name="userGuess"
+							id="userGuess"
+							className="text"
+							maxLength="3"
+							autoComplete="off"
+							placeholder="Enter your Guess"
+							required
+						/>
+			     	<button
+							id="guessButton"
+							className="button"
+							value="Guess"
+							onClick={this.userGuess}
+						>Guess
+						</button>
 					</form>
 			     	<p>Guess #<span id="count">{this.props.guessList.length}</span>!</p>
          <ul id="guessList" className="guessBox clearfix">
