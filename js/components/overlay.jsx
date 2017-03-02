@@ -5,13 +5,15 @@ import Store from '../redux/store'
 import { connect } from 'react-redux'
 
 
-var Overlay = React.createClass({
-	render: function() {
-		var classes = 'overlay ';
+export class Overlay extends React.Component {
+	render() {
+
+		let classes = 'overlay ';
 
 		if (!this.props.showOverlay) {
 			classes += 'hidden';
 		}
+
 		return (
 			<div className={classes} id="modal">
 				<div className="content">
@@ -29,19 +31,32 @@ var Overlay = React.createClass({
 				</div>
 			</div>
 		)
-	}
-});
 
-var mapStateToProps = function(state, props) {
-	console.log(state, '<== mapstate');
+	}
+}
+
+function mapStateToProps(state) {
+	console.log(state, "<== overlay state")
 	return {
 		showOverlay: state.showOverlay
 	}
-};
+}
 
-var Container = connect(mapStateToProps)(Overlay);
+export default connect(mapStateToProps)(Overlay)
 
-module.exports = Container;
+// OLD CODE -- DELETE AFTER TESTING
+// var mapStateToProps = function(state, props) {
+// 	console.log(state, '<== mapstate');
+// 	return {
+// 		showOverlay: state.showOverlay
+// 	}
+// };
+//
+// var Container = connect(mapStateToProps)(Overlay);
+//
+// module.exports = Container;
+
+
 // Comment out for running on server, leave for testing
 // module.exports = Overlay;
 
