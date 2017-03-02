@@ -1,46 +1,90 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var actions = require('../redux/actions');
-var connect = require('react-redux').connect;
-var Overlay = require('./overlay');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import actions from '../redux/actions'
+import { connect } from 'react-redux'
+import Overlay from './overlay'
 
-var Game = React.createClass({
-	userGuess: function(event) {
-		event.preventDefault();
+export class Game extends React.Component {
+	constructor() {
+		super()
+		this.userGuess = this.userGuess.bind(this)
+		this.resetGame = this.resetGame.bind(this)
+		this.toggleOverlay = this.toggleOverlay.bind(this)
+	}
+	
+	userGuess(event) {
+		event.preventDefault()
 		//dispatch GUESS_NUM action
-		var userNumber = this.refs.userInput.value;
-		this.props.dispatch(actions.guess(userNumber));
-	},
-	resetGame: function() {
+		var userNumber = this.refs.userInput.value
+		this.props.dispatch(actions.guess(userNumber))
+	}
+
+	resetGame() {
 		//dispatch NEW_GAME action
 		//onChange!
-		this.refs.userInput.value = '';
-		this.props.dispatch(actions.newGame());
-	},
-	toggleOverlay: function() {
-		console.log(this.props, '<== Games props');
-		//dispatch displayOverlay action
-		this.props.dispatch(actions.displayOverlay());
-	},
+		this.refs.userInput.value = ''
+		this.props.dispatch(actions.newGame())
+	}
 
-	render: function() {
+	toggleOverlay() {
+		console.log(this.props, '<== Games props')
+		//dispatch displayOverlay action
+		this.props.dispatch(actions.displayOverlay())
+	}
+
+	render() {
 		var guesses = this.props.guessList.map(function(guess, index) {
    		return <li key={index}>{guess}</li>
-    });
-		var container = 'game ';
-		if (this.props.feedback === 'Freezing!') {
-			container += 'freezing';
-		} else if (this.props.feedback === 'Cold') {
-			container += 'cold';
-		} else if (this.props.feedback === 'Warm') {
-			container += 'warm';
-		} else if (this.props.feedback === 'Hot') {
-			container += 'hot';
-		} else if (this.props.feedback === 'So Hot Right Now') {
-			container += 'burning';
-		} else if (this.props.feedback === "You Got It!") {
-			container += 'correct';
+    })
+
+		let container = 'game '
+
+		switch(this.props.feedback) {
+			case 'Freezing!': {
+				container += 'freezing'
+				break
+			}
+			case 'Cold': {
+				container += 'cold'
+				break
+			}
+			case 'Warm': {
+				container += 'warm'
+				break
+			}
+			case 'Hot': {
+				container += 'hot'
+				break
+			}
+			case 'So Hot Right Now': {
+				container += 'burning'
+				break
+			}
+			case 'You Got It!': {
+				container += 'correct'
+				break
+			}
+			default: {
+				console.log('Something\'s broken')
+				break
+			}
 		}
+
+
+		// OLD CODE -- DELETE AFTER TESTING
+		// if (this.props.feedback === 'Freezing!') {
+		// 	container += 'freezing';
+		// } else if (this.props.feedback === 'Cold') {
+		// 	container += 'cold';
+		// } else if (this.props.feedback === 'Warm') {
+		// 	container += 'warm';
+		// } else if (this.props.feedback === 'Hot') {
+		// 	container += 'hot';
+		// } else if (this.props.feedback === 'So Hot Right Now') {
+		// 	container += 'burning';
+		// } else if (this.props.feedback === "You Got It!") {
+		// 	container += 'correct';
+		// }
 
 		return (
 
@@ -86,17 +130,28 @@ var Game = React.createClass({
 
 		)
 	}
-});
+}
 
 
-var mapStateToProps = function(state, props) {
+function mapStateToProps(state) {
 	return {
 		feedback: state.feedback,
 		guessList: state.guessList,
 		showOverlay: state.showOverlay
 	}
-};
+}
 
-var Container = connect(mapStateToProps)(Game);
+export default connect(mapStateToProps)(Game)
 
-module.exports = Container;
+// OLD CODE -- DELETE AFTER TESTING
+// var mapStateToProps = function(state, props) {
+// 	return {
+// 		feedback: state.feedback,
+// 		guessList: state.guessList,
+// 		showOverlay: state.showOverlay
+// 	}
+// };
+//
+// var Container = connect(mapStateToProps)(Game);
+//
+// module.exports = Container;

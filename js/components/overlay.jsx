@@ -1,8 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var actions = require('../redux/actions');
-var Store = require('../redux/store');
-var connect = require('react-redux').connect;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import actions from '../redux/actions'
+import Store from '../redux/store'
+import { connect } from 'react-redux'
+
 
 var Overlay = React.createClass({
 	render: function() {
