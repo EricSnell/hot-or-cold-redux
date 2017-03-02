@@ -1,10 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Provider = require('react-redux').Provider;
-var store = require('./redux/store');
-var Game = require('./game');
+import Reacat from 'react'
+import ReactDOM from 'react-dom'
+import Provider from 'react-redux'
+import store from './redux/store'
+import Game from './components/game'
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 	ReactDOM.render(
 		<Provider store={store}>
 			<Game />
