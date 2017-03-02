@@ -1,4 +1,4 @@
-var actions = require('./actions');
+import actions from './actions'
 
 var initialGameState = {
 	guessList: [],
@@ -7,18 +7,18 @@ var initialGameState = {
 	showOverlay: false
 };
 
-var gameReducer = function(state, action) {
-	state = state || initialGameState;
+function gameReducer(state, action) {
+	
+	state = state || initialGameState
 
-	if(action.type === actions.NEW_GAME) {
+	if (action.type === actions.NEW_GAME) {
 		// The guess counter can be assigned to the length of the guessList array
-		var newGameState = Object.assign(initialGameState, {randomNum: Math.floor(Math.random() * 100 + 1)});
-
-		return newGameState;
+		var newGameState = Object.assign(initialGameState, { randomNum: Math.floor(Math.random() * 100 + 1) })
+		return newGameState
 	}
 
-	if(action.type === actions.DISPLAY_OVERLAY) {
-		console.log(state);
+	if (action.type === actions.DISPLAY_OVERLAY) {
+		console.log(state)
 		if (!state.showOverlay) {
 			return Object.assign({}, state, {showOverlay: true})
 		} else {
@@ -26,40 +26,41 @@ var gameReducer = function(state, action) {
 		}
 	}
 
-	if(action.type === actions.GUESS_NUM) {
-		// var userGuess = state.guessList[state.guessList.length - 1];
+	if (action.type === actions.GUESS_NUM) {
+		// var userGuess = state.guessList[state.guessList.length - 1]
 		// new copy of the guessList array adding the user's guess
-		var newGuessList = state.guessList.concat(action.number);
+		var newGuessList = state.guessList.concat(action.number)
 		// the difference between the correct answer and the user's guess
-		var distance = Math.abs(action.number - state.randomNum);
-		var feedback = '';
+		var distance = Math.abs(action.number - state.randomNum)
+		var feedback = ''
 
 		if (action.number <= 100 && action.number >= 1) {
 			if (distance === 0) {
-				feedback ='You Got It!';
+				feedback ='You Got It!'
 			}
 			else if (distance <= 5) {
-				feedback = 'So Hot Right Now';
+				feedback = 'So Hot Right Now'
 			}
 			else if (distance <= 15) {
-				feedback = 'Hot';
+				feedback = 'Hot'
 			}
 			else if (distance <= 25) {
-				feedback = 'Warm';
+				feedback = 'Warm'
 			}
 			else if (distance <= 50) {
-				feedback = 'Cold';
+				feedback = 'Cold'
 			}
 			else if (distance <= 99) {
-				feedback = 'Freezing!';
+				feedback = 'Freezing!'
 			}
 			// Create new object that updates state, setting the guessList to the updated array, the feedback to the updated feedback, and the counter to the length of the new array
-			var newState = Object.assign({}, state, {guessList: newGuessList, feedback: feedback});
-
-			return newState;
+			var newState = Object.assign({}, state, {guessList: newGuessList, feedback: feedback})
+			return newState
 		}
 	}
-	return state;
-};
 
-exports.gameReducer = gameReducer;
+	return state
+
+}
+
+exports.gameReducer = gameReducer
