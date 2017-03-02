@@ -35,31 +35,11 @@ export class Overlay extends React.Component {
 	}
 }
 
+
 function mapStateToProps(state) {
-	console.log(state, "<== overlay state")
 	return {
 		showOverlay: state.showOverlay
 	}
 }
 
 export default connect(mapStateToProps)(Overlay)
-
-// OLD CODE -- DELETE AFTER TESTING
-// var mapStateToProps = function(state, props) {
-// 	console.log(state, '<== mapstate');
-// 	return {
-// 		showOverlay: state.showOverlay
-// 	}
-// };
-//
-// var Container = connect(mapStateToProps)(Overlay);
-//
-// module.exports = Container;
-
-
-// Comment out for running on server, leave for testing
-// module.exports = Overlay;
-
-// exports.Overlay = Overlay;
-// exports.Container = Container;
-// require('the file').Container;

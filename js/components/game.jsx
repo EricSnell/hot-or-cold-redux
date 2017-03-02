@@ -11,24 +11,20 @@ export class Game extends React.Component {
 		this.resetGame = this.resetGame.bind(this)
 		this.toggleOverlay = this.toggleOverlay.bind(this)
 	}
-	
+
 	userGuess(event) {
 		event.preventDefault()
-		//dispatch GUESS_NUM action
 		var userNumber = this.refs.userInput.value
 		this.props.dispatch(actions.guess(userNumber))
 	}
 
 	resetGame() {
-		//dispatch NEW_GAME action
-		//onChange!
 		this.refs.userInput.value = ''
 		this.props.dispatch(actions.newGame())
 	}
 
 	toggleOverlay() {
 		console.log(this.props, '<== Games props')
-		//dispatch displayOverlay action
 		this.props.dispatch(actions.displayOverlay())
 	}
 
@@ -69,22 +65,6 @@ export class Game extends React.Component {
 				break
 			}
 		}
-
-
-		// OLD CODE -- DELETE AFTER TESTING
-		// if (this.props.feedback === 'Freezing!') {
-		// 	container += 'freezing';
-		// } else if (this.props.feedback === 'Cold') {
-		// 	container += 'cold';
-		// } else if (this.props.feedback === 'Warm') {
-		// 	container += 'warm';
-		// } else if (this.props.feedback === 'Hot') {
-		// 	container += 'hot';
-		// } else if (this.props.feedback === 'So Hot Right Now') {
-		// 	container += 'burning';
-		// } else if (this.props.feedback === "You Got It!") {
-		// 	container += 'correct';
-		// }
 
 		return (
 
@@ -142,16 +122,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Game)
-
-// OLD CODE -- DELETE AFTER TESTING
-// var mapStateToProps = function(state, props) {
-// 	return {
-// 		feedback: state.feedback,
-// 		guessList: state.guessList,
-// 		showOverlay: state.showOverlay
-// 	}
-// };
-//
-// var Container = connect(mapStateToProps)(Game);
-//
-// module.exports = Container;

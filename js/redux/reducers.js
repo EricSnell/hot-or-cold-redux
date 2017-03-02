@@ -8,7 +8,7 @@ var initialGameState = {
 };
 
 function gameReducer(state, action) {
-	
+
 	state = state || initialGameState
 
 	if (action.type === actions.NEW_GAME) {
@@ -27,7 +27,6 @@ function gameReducer(state, action) {
 	}
 
 	if (action.type === actions.GUESS_NUM) {
-		// var userGuess = state.guessList[state.guessList.length - 1]
 		// new copy of the guessList array adding the user's guess
 		var newGuessList = state.guessList.concat(action.number)
 		// the difference between the correct answer and the user's guess
