@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var actions = require('./actions');
-var Store = require('./store');
+var actions = require('../redux/actions');
+var Store = require('../redux/store');
 var connect = require('react-redux').connect;
 
 var Overlay = React.createClass({
@@ -40,9 +40,9 @@ var mapStateToProps = function(state, props) {
 
 var Container = connect(mapStateToProps)(Overlay);
 
-module.exports = Container;  
+module.exports = Container;
 // Comment out for running on server, leave for testing
-// module.exports = Overlay;		
+// module.exports = Overlay;
 
 // exports.Overlay = Overlay;
 // exports.Container = Container;

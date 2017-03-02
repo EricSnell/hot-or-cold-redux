@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var actions = require('./actions');
+var actions = require('../redux/actions');
 var connect = require('react-redux').connect;
 var Overlay = require('./overlay');
 
