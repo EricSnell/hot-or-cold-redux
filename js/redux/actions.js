@@ -1,24 +1,33 @@
-var GUESS_NUM = 'GUESS_NUM';
-var guess = function(userGuess) {
-    return {
-        type: GUESS_NUM,
-        number: userGuess
-    }
-};
+/* Constants */
 
-var NEW_GAME = 'NEW_GAME';
-var newGame = function() {
+const GUESS_NUM = 'GUESS_NUM'
+const NEW_GAME = 'NEW_GAME'
+const DISPLAY_OVERLAY = 'DISPLAY_OVERLAY'
+
+
+/* Actions */
+
+function guess(userGuess) {
+  return {
+      type: GUESS_NUM,
+      number: userGuess
+  }
+}
+
+function newGame() {
 	return {
 		type: NEW_GAME
 	}
-};
+}
 
-var DISPLAY_OVERLAY = 'DISPLAY_OVERLAY';
-var displayOverlay = function() {
+function displayOverlay() {
 	return {
 		type: DISPLAY_OVERLAY
 	}
-};
+}
+
+
+/* Exports */
 
 exports.GUESS_NUM = GUESS_NUM;
 exports.NEW_GAME = NEW_GAME;
